@@ -11,7 +11,7 @@ const Search = (props) => {
       method: "GET",
       headers: {
         "x-rapidapi-host": "wordsapiv1.p.rapidapi.com",
-        "x-rapidapi-key": "ae851d204emshb7847ed4126cd5ep1bff28jsn782e6d012841",
+        "x-rapidapi-key": process.env.NEXT_PUBLIC_WORDS,
       },
     })
       .then((response) => response.json())
