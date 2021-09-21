@@ -1,0 +1,40 @@
+.card {
+  width: 500px;
+  height: 500px;
+  overflow: auto;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+.card::-webkit-scrollbar {
+  display: none;
+}
+
+.card p {
+  text-align: center;
+}
+
+.card ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  background-color: #6d98ff;
+  border-radius: 5px;
+}
+
+.card li {
+  margin: 5px;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.odd {
+  background-color: lightpink;
+}
+
+.even {
+  background-color: lightgreen;
+}

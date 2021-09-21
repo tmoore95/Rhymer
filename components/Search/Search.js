@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
+import ResultsCard from "../Results/ResultsCard";
 import styles from "./Search.module.scss";
 
 const Search = (props) => {
   const [word, setWord] = useState("");
-  console.log(word);
+  const [resultsArr, setResultsArr] = useState([]);
 
   const submitHandler = (e) => {
     e.preventDefault();
@@ -17,11 +18,16 @@ const Search = (props) => {
       .then((response) => response.json())
       .then((data) => {
         if (data.rhymes.all !== undefined) {
-          console.log(data.rhymes.all.filter((word) => !word.includes(" ")));
+          // console.log(data.rhymes.all.filter((word) => !word.includes(" ")));
+          setResultsArr(data.rhymes.all.filter((word) => !word.includes(" ")));
+        } else {
+          setResultsArr(["No rhyme exists for that word!"]);
         }
       });
     setWord("");
   };
+
+  console.log(resultsArr);
 
   useEffect(() => {
     const input = document.getElementById("input");
@@ -48,6 +54,7 @@ const Search = (props) => {
         />
         <button type="submit">Enter</button>
       </form>
+      <ResultsCard array={resultsArr} />
     </div>
   );
 };
