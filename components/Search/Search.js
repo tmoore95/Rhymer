@@ -23,6 +23,7 @@ const Search = (props) => {
         } else {
           setResultsArr(["No rhyme exists for that word!"]);
         }
+        console.log();
       });
     setWord("");
   };
@@ -52,7 +53,9 @@ const Search = (props) => {
           value={word}
           required
         />
-        <button type="submit">Enter</button>
+        <button className={word ? styles.flicker : styles.button} type="submit">
+          Enter
+        </button>
       </form>
       <ResultsCard array={resultsArr} />
     </div>
