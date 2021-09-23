@@ -1,6 +1,6 @@
 .card {
   width: 500px;
-  height: 455px;
+  height: 400px;
   overflow: auto;
   margin-top: 20px;
   border-radius: 5px;
@@ -30,6 +30,8 @@
   border-radius: 5px;
   padding: 5px;
   padding-bottom: 9px;
+  border: 2px solid black;
+  font-weight: 500;
 }
 
 .odd {

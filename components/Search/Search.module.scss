@@ -1,7 +1,10 @@
 .form input {
   display: block;
   text-align: center;
-  margin-bottom: 10px;
+  border-radius: 5px;
+  padding: 10px;
+  border: none;
+  box-shadow: 0 0 10px lightgrey;
 }
 
 .form input:focus {
@@ -20,10 +23,13 @@
   border: none;
   color: white;
   height: 35px;
+  font-weight: bold;
+  background-color: #130943;
+  margin: 10px;
 }
 
 .button {
-  background-color: #dc3545;
+  background-color: #130943;
 }
 
 @keyframes flickerAnimation {
@@ -38,10 +44,23 @@
   }
 }
 
-.flicker {
-  -webkit-animation: flickerAnimation 2.5s infinite;
-  -moz-animation: flickerAnimation 2.5s infinite;
-  -o-animation: flickerAnimation 2.5s infinite;
-  animation: flickerAnimation 2.5s infinite;
-  background-color: #007bff;
+@keyframes bounce {
+  0% {
+    width: 50px;
+  }
+  50% {
+    width: 54px;
+    height: 39px;
+    margin: 8px;
+  }
+  100% {
+    width: 50px;
+  }
+}
+
+.bounce {
+  -webkit-animation: bounce 0.8s infinite;
+  -moz-animation: bounce 0.8s infinite;
+  -o-animation: bounce 0.8s infinite;
+  animation: bounce 0.8s infinite;
 }

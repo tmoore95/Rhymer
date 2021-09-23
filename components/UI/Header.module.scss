@@ -1,11 +1,54 @@
 .title {
   display: flex;
+  font-size: 25px;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
 }
 
-.first {
+// .first {
+//   color: lightpink;
+// }
+
+// .second {
+//   color: lightgreen;
+// }
+
+@keyframes flickerOne {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes flickerTwo {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.flickerOne {
   color: lightpink;
+  -webkit-animation: flickerOne 5s infinite;
+  -moz-animation: flickerOne 5s infinite;
+  -o-animation: flickerOne 5s infinite;
+  animation: flickerOne 5s infinite;
 }
 
-.second {
+.flickerTwo {
   color: lightgreen;
+  -webkit-animation: flickerTwo 5s infinite;
+  -moz-animation: flickerTwo 5s infinite;
+  -o-animation: flickerTwo 5s infinite;
+  animation: flickerTwo 5s infinite;
 }

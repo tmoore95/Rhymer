@@ -53,7 +53,7 @@ const Search = (props) => {
           value={word}
           required
         />
-        <button className={word ? styles.flicker : styles.button} type="submit">
+        <button className={word ? styles.bounce : styles.button} type="submit">
           Enter
         </button>
       </form>
