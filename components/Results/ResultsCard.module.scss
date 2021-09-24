@@ -1,9 +1,13 @@
 .card {
-  width: 500px;
-  height: 400px;
+  width: 40%;
+  height: 70%;
   overflow: auto;
   margin-top: 20px;
   border-radius: 5px;
+
+  @media screen and (max-device-width: 480px) {
+    width: 150%;
+  }
 }
 
 .card p {
